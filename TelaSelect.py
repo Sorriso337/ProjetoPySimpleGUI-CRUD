@@ -8,7 +8,6 @@ class TelaPython:
         sg.change_look_and_feel('DarkBlue11')
         #layout
         layout = [
-            #[sg.Text('Busque pelo ID, não preencha o ID e veja todos', size = (40,0))]
             [sg.Text('ID', size = (5,0)),sg.Input(size = (10,0), key ='id')],
             [sg.Button('Visualizar produtos cadastrados produtos')],
             [sg.Button('Voltar')],

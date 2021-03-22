@@ -17,13 +17,13 @@ class TelaPython:
             [sg.Output(size = (35,20))]
         ]
         #janela 
-
         self.janela = sg.Window('Dados do Produto').layout(layout)
     
     def Iniciar(self):      
         while True:
             #Extrair os dados da tela
             event, values = self.janela.Read()
+
             #Recebe os valores do Formulário
             if event == 'Cadastrar produtos':
                 nome = values['nome']
@@ -41,7 +41,7 @@ class TelaPython:
                 print(f'Disponibilidade: {disponibilidade}')
 
 
-                    #Insert no banco chamando a função insert do arquivo Banco.py
+                #Insert no banco chamando a função insert do arquivo Banco.py
                 Banco.insert(self,nome,preco,quantidade,disponibilidade)
 
             #Volta ao formulário inicial

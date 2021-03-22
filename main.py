@@ -18,11 +18,12 @@ class TelaInicio:
         ]
         #janela 
 
-        self.janela = sg.Window('Início', icon = 'img/inicio.png').layout(layout1)
+        self.janela = sg.Window('Início', icon = 'img/logo.png').layout(layout1)
     
     def Iniciar(self):      
         while True:
             event, values = self.janela.read()
+
             if event == sg.WIN_CLOSED:
                 break   
             
@@ -46,4 +47,3 @@ class TelaInicio:
 
             #Extrair os dados da tela
             self.button, self.values = self.janela.Read()
-            
