@@ -1,3 +1,0 @@
-Projeto básico de CRUD de produtos em um banco SQL Server utilizando Pyodbc e PySimpleGUI.
-
-O programa roda através do main.py que é um HUB para os outros arquivos que realizam as funções do CRUD.
