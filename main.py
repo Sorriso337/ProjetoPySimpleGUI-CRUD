@@ -11,8 +11,10 @@ class TelaInicio:
         #layout
         layout1 = [
             [sg.Text('Para qual área seguir?')],
-            [sg.Button('Cadastro'),sg.Button('Consulta')],
-            [sg.Button('Adicionar'),sg.Button('Retirada')],
+            [sg.Button('Cadastro', size = (10,1))],
+            [sg.Button('Consulta',size = (10,1))],
+            [sg.Button('Adicionar',size = (10,1))],
+            [sg.Button('Retirada',size = (10,1))],
         ]
         #janela 
 
@@ -22,30 +24,26 @@ class TelaInicio:
         while True:
             event, values = self.janela.read()
             if event == sg.WIN_CLOSED:
-                break
+                break   
             
             if event == 'Cadastro':
+                self.janela.close( )
                 tela = TelaInsert.TelaPython()
                 tela.Iniciar()
-                self.janela.Hide()
             if event == 'Consulta':
+                self.janela.close()
                 tela = TelaSelect.TelaPython()
                 tela.Iniciar()
-                self.janela.Hide()
             if event == 'Adicionar':
+                self.janela.close()
                 tela = TelaAlterPlus.TelaPython()
                 tela.Iniciar()
-                self.janela.Hide()
             if event == 'Retirada':
+                self.janela.close()
                 tela = TelaAlter.TelaPython()
                 tela.Iniciar()
-                self.janela.Hide()
             
 
             #Extrair os dados da tela
             self.button, self.values = self.janela.Read()
-            #Recebe os valores do Formulário
             
-
-tela = TelaInicio()
-tela.Iniciar()
